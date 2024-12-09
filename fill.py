@@ -1,4 +1,5 @@
 import sqlite3
+import tkinter.messagebox as messagebox
 
 
 # First Run main.py to create your contacts.db file!!!!!
@@ -33,6 +34,8 @@ def add_contacts():
     conn.commit()
     conn.close()
     print("Contacts added successfully.")
+    messagebox.showinfo("Success", "Contacts added successfully! Run the Contact List Application!")
+    
 
 if __name__ == "__main__":
     add_contacts()
